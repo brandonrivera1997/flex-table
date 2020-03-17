@@ -1,28 +1,49 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="app">
+    <div class="rivera">
+      <MyTable class="my-table"/>
+       <b-button class="my-button">Default</b-button>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+//import HelloWorld from './components/HelloWorld.vue';
+import MyTable from './components/MyTable.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    MyTable
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+
+.app {
+  margin: 1rem;
+  display: flex;
+  border: 2px solid lime;
+  /*height: 40rem;*/
 }
+
+.my-table {
+  flex-grow: 0;
+  border: 2px solid red;
+}
+
+.rivera {
+  display: flex;
+  border: 3px solid black;
+  height: 40rem;
+  flex-direction: column;
+}
+
+.my-button {
+  /*margin-top: 1rem;*/
+  align-self: center;
+  /*flex-grow: 1;*/
+}
+
 </style>
